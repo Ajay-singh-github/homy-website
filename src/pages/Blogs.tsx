@@ -1,4 +1,5 @@
 import BlogCard from '@/components/BlogCard';
+import blog from "../assets/blogs.jpeg"
 
 // Sample blog data
 const blogData = [
@@ -6,42 +7,42 @@ const blogData = [
     title: "Meal Prep Tips for a Healthier Life",
     author: "Saanvi Biradar",
     role: "Head Chef",
-    image: "rame%20(2)-4HLdD9OHLUjCBiY0iIawy5JEaZXusF.png",
+    image: blog,
     description: "Prepping meals ahead can be a game-changer for busy weeks. With the Homy Comfort plan, get fresh ingredients and easy-to-follow recipes that take the stress out of cooking. Discover how simple steps like organizing ingredients and planning your meals can keep you consistent and energized all week."
   },
   {
     title: "Quick and Easy Breakfast Ideas",
     author: "Alex Johnson",
     role: "Nutritionist",
-    image: "/placeholder.svg?height=200&width=400",
+    image: blog,
     description: "Start your day right with these quick and nutritious breakfast ideas. Perfect for busy mornings, these recipes will fuel your body and mind for the day ahead."
   },
   {
     title: "Vegetarian Dishes That Pack a Protein Punch",
     author: "Emma Lee",
     role: "Dietitian",
-    image: "/placeholder.svg?height=200&width=400",
+    image: blog,
     description: "Discover delicious vegetarian meals that are high in protein. These recipes prove that you don't need meat to meet your protein needs and stay satisfied."
   },
   {
     title: "Meal Prep Tips for a Healthier Life",
     author: "Saanvi Biradar",
     role: "Head Chef",
-    image: "rame%20(2)-4HLdD9OHLUjCBiY0iIawy5JEaZXusF.png",
+    image:blog,
     description: "Prepping meals ahead can be a game-changer for busy weeks. With the Homy Comfort plan, get fresh ingredients and easy-to-follow recipes that take the stress out of cooking. Discover how simple steps like organizing ingredients and planning your meals can keep you consistent and energized all week."
   },
   {
     title: "Quick and Easy Breakfast Ideas",
     author: "Alex Johnson",
     role: "Nutritionist",
-    image: "/placeholder.svg?height=200&width=400",
+    image: blog,
     description: "Start your day right with these quick and nutritious breakfast ideas. Perfect for busy mornings, these recipes will fuel your body and mind for the day ahead."
   },
   {
     title: "Vegetarian Dishes That Pack a Protein Punch",
     author: "Emma Lee",
     role: "Dietitian",
-    image: "/placeholder.svg?height=200&width=400",
+    image: blog,
     description: "Discover delicious vegetarian meals that are high in protein. These recipes prove that you don't need meat to meet your protein needs and stay satisfied."
   },
   

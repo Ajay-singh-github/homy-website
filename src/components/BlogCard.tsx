@@ -35,7 +35,7 @@ const BlogCard = ({
             <div className="relative aspect-[4/3] w-full">
                 <img
                     alt="Blog post image"
-                    className="object-cover fill-inherit"
+                    className="object-cover h-full w-full"
                     src={image}
                 />
             </div>

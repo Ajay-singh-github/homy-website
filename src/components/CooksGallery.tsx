@@ -1,4 +1,5 @@
 import CookCard from "@/components/CookCard";
+import cook from "../assets/cook.jpeg"
 import {
   Carousel,
   CarouselContent,
@@ -18,25 +19,25 @@ const chefs: Chef[] = [
     name: "Andrew",
     rating: 4.3,
     cuisines: ["Italian", "Indian", "Mexican", "Chinese"],
-    image: "/placeholder.svg?height=400&width=300",
+    image: cook,
   },
   {
     name: "Sarah",
     rating: 4.5,
     cuisines: ["French", "Japanese", "Thai"],
-    image: "/placeholder.svg?height=400&width=300",
+    image: cook,
   },
   {
     name: "Michael",
     rating: 4.7,
     cuisines: ["Mediterranean", "Greek", "Turkish"],
-    image: "/placeholder.svg?height=400&width=300",
+    image: cook,
   },
   {
     name: "Emma",
     rating: 4.4,
     cuisines: ["Korean", "Vietnamese", "Chinese"],
-    image: "/placeholder.svg?height=400&width=300",
+    image: cook,
   },
 ];
 const CooksGallery = () => {

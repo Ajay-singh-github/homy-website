@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Star } from "lucide-react"
+import customer from "../assets/customer.png"
 
 interface Testimonial {
     name: string
@@ -14,19 +15,19 @@ interface Testimonial {
       name: "Wade Warren",
       rating: 4.75,
       comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/placeholder.svg?height=100&width=100"
+      image: customer
     },
     {
       name: "Wade Warren",
       rating: 4.75,
       comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/placeholder.svg?height=100&width=100"
+      image: customer
     },
     {
       name: "Wade Warren",
       rating: 4.75,
       comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/placeholder.svg?height=100&width=100"
+      image: customer
     }
   ]
   
