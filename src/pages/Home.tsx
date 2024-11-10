@@ -18,7 +18,7 @@ const Home = () => {
         <HomyCeleberation/>
         <Testimonials/>
         <Cuisines/>
-        <div className='h-[50vh] p-8 secondaryFont text-center text-[4rem]'>
+        <div className='sm:h-[50vh] min-h-fit p-8 secondaryFont text-center text-[4rem]'>
             <h1>From Kitchen to Plate, </h1>
             <h1 className='text-red-500'>Just the Way You Like It!</h1>
         </div>

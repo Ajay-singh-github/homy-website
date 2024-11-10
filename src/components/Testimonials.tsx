@@ -61,7 +61,7 @@ interface Testimonial {
   }
 const Testimonials = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-2 py-16">
       <h2 className="text-4xl font-bold text-center text-red-500 italic mb-12 secondaryFont">
         Our Happy Customers
       </h2>
@@ -79,8 +79,8 @@ const Testimonials = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="text-white" />
-        <CarouselNext className="text-white" />
+        {/* <CarouselPrevious className="text-white" /> */}
+        {/* <CarouselNext className="text-white" /> */}
       </Carousel>
     </div>
   )

@@ -21,7 +21,7 @@ const Nutrition = () => {
       </div>
 
       <div className="relative">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-16 items-center">
+        <div className="grid grid-cols-1  md:grid-cols-[1fr_auto_1fr] gap-16 items-center">
           {/* Regular Sandwich */}
           <div className="text-center">
             <div className="relative w-full max-w-md mx-auto mb-4">
@@ -35,7 +35,7 @@ const Nutrition = () => {
           </div>
 
           {/* Nutrition Facts */}
-          <div className="space-y-6">
+          <div className="space-y-6 mx-auto ">
             {nutritionFacts.map((fact, index) => (
               <div key={index} className="flex flex-col gap-2 items-center w-[12rem]">
                 <div className="bg-pink-50 text-center py-2 px-6 rounded-full w-full">

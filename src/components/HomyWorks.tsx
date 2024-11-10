@@ -17,12 +17,12 @@ const HomyWorks = () => {
       <div className="absolute inset-0 bg-black opacity-50"></div>
       
       {/* Image on the left */}
-      <div className="relative h-[48rem] w-auto flex items-center justify-center p-12">
+      <div className="relative hidden md:flex h-[48rem] w-auto items-center justify-center p-12">
         <img src={iphone} alt="homy" className="h-full w-auto object-contain" />
       </div>
 
       {/* Content on the right */}
-      <div className="flex flex-col text-white gap-6 p-4 mr-20 relative">
+      <div className="flex flex-col text-white gap-6 p-4 md:mr-20 relative">
         <h2 className="text-[3rem] font-bold w-[16rem]">How Homy Works?</h2>
         <p className="font-bold w-full max-w-sm">
           From selecting your preferred cooking service plan to customizing your
@@ -52,7 +52,7 @@ const HomyWorks = () => {
       </div>
       
       {/* Decorative line */}
-      <img src={line} alt="" className="absolute right-0 top-1/3" />
+      <img src={line} alt="" className="absolute right-0 top-1/3 hidden sm:block" />
     </div>
   );
 };
