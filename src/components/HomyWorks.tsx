@@ -8,7 +8,7 @@ import iphone from "../assets/iphone.png";
 const HomyWorks = () => {
   return (
     <div
-      className="h-[90vh] bg-cover bg-center bg-no-repeat flex items-center justify-between gap-8 relative px-16"
+      className=" w-full bg-cover bg-center bg-no-repeat flex items-center justify-between gap-8 relative min-h-[600px] overflow-hidden"
       style={{
         backgroundImage: `url(${homyWorks})`,
       }}

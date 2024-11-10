@@ -15,11 +15,13 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <SidebarProvider>
-    <div className="w-screen min-h-screen flex flex-col justify-between">
-      <Header />
-      {children}
-      <Footer />
-    </div>
+      <div className="w-screen min-h-screen flex flex-col justify-between">
+        <Header />
+        <div className="mt-20 w-full h-full p-1">
+        {children}
+        </div>
+        <Footer />
+      </div>
     </SidebarProvider>
   );
 };
