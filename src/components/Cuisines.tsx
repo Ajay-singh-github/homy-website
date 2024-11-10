@@ -19,7 +19,7 @@ const cuisines: CuisineType[] = [
 
 const Cuisines = () => {
   return (
-    <div className="relative min-h-[600px] h-full flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 flex items-center justify-center z-0 w-[32rem] mx-auto">
         <img
@@ -31,14 +31,14 @@ const Cuisines = () => {
 
       <div className="container h-full  mx-auto px-4 py-8 relative z-10">
         {/* Title */}
-        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-red-500 italic text-center mb-16 secondaryFont">
+        <h2 className="text-4xl md:text-5xl font-bold text-red-500 italic text-center mb-16 secondaryFont">
           Experience a World of Flavors
         </h2>
 
         {/* Cuisine Grid */}
         <div className="max-w-4xl mx-auto">
           {/* From Indian classics label */}
-          <div className="absolute left-4 md:left-0 top-[30%] transform -translate-y-1/2">
+          <div className="hidden sm:absolute left-4 md:left-0 top-[30%] transform -translate-y-1/2">
             <Card className="bg-red-50 text-red-500 px-4 py-2 text-sm">
               From Indian classics
             </Card>
@@ -46,7 +46,7 @@ const Cuisines = () => {
           </div>
 
           {/* To international cuisines label */}
-          <div className="absolute right-4 md:right-0 -bottom-[30px] sm:bottom-[2px] transform -translate-y-1/2">
+          <div className="sm:absolute hidden right-4 md:right-0 -bottom-[30px] sm:bottom-[2px] transform -translate-y-1/2">
             <div className="h-px w-16 bg-red-200 absolute top-1/2 -left-16 dotted-line" />
             <Card className="bg-red-50 text-red-500 px-4 py-2 text-sm">
               to international cuisines

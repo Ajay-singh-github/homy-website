@@ -1,5 +1,6 @@
 import Footer from "@/components/Layout/Footer";
 import Header from "@/components/Layout/Header";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import About from "@/pages/About";
 import Blogs from "@/pages/Blogs";
 import ContactUs from "@/pages/ContactUs";
@@ -13,11 +14,13 @@ interface LayoutProps {
 }
 const Layout = ({ children }: LayoutProps) => {
   return (
+    <SidebarProvider>
     <div className="w-screen min-h-screen flex flex-col justify-between">
       <Header />
       {children}
       <Footer />
     </div>
+    </SidebarProvider>
   );
 };
 
