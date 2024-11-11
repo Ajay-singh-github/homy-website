@@ -17,9 +17,9 @@ const Layout = ({ children }: LayoutProps) => {
     <SidebarProvider>
       <div className="w-screen min-h-screen flex flex-col justify-between">
         <Header />
-        <div className="mt-20 w-full h-full p-1">
+        {/* <div className=" w-full h-full"> */}
         {children}
-        </div>
+        {/* </div> */}
         <Footer />
       </div>
     </SidebarProvider>

@@ -13,7 +13,7 @@ const HeroSection = () => {
         backgroundImage:`url(${heroImg})`,
       }}
     >
-      <div className="w-[24rem]  text-center">
+      <div className="w-[16rem] sm:w-[24rem]  text-center">
         <h1 className="text-3xl secondaryFont">
           Welcome to <span className="text-red-500">Homy</span>
         </h1>
@@ -39,7 +39,7 @@ const HeroSection = () => {
           Download App
         </Button>
       </div>
-      <div className="h-2/5 flex items-end justify-end w-full p-16">
+      <div className="h-2/5 flex items-end justify-end w-full sm:p-16">
         <div className="space-y-4">
           <Link to="#" className="block">
             <img

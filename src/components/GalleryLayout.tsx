@@ -8,6 +8,8 @@ import gallery6 from "../assets/gallery6.png"
 import gallery7 from "../assets/gallery7.png"
 import gallery8 from "../assets/gallery8.png"
 
+import {motion} from "framer-motion"
+
 interface GalleryImage {
   src: string;
   alt: string;
@@ -70,7 +72,10 @@ const GalleryLayout = ({
       </h1>
       <div className="grid grid-cols-4 gap-4 max-w-5xl mx-auto ">
         {images.map((image, index) => (
-          <div
+          <motion.div
+          initial={{y:index%2?100:-100,opacity:0}}
+          whileInView={{y:0,opacity:1}}
+          transition={{duration:0.7,ease:"easeOut"}}
           key={index}
           className={`relative overflow-hidden rounded-2xl ${image.className}`}
         >
@@ -82,8 +87,7 @@ const GalleryLayout = ({
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-        </div>
-        
+        </motion.div>
         ))}
       </div>
     </div>

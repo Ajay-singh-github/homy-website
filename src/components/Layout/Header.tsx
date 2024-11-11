@@ -42,8 +42,8 @@ const HeaderContent = () => {
 
   return (
     <>
-      <header className="w-full h-20 fixed top-0 left-0 right-0 z-10 bg-white border-b">
-        <div className="container mx-auto px-4 h-full">
+      <header className="w-full pt-3 h-20 sticky top-0 left-0 right-0 z-10 bg-white border-b">
+        <div className="container mx-auto px-2 sm:px-4 h-full">
           <div className="flex items-center justify-between h-full">
             {/* Logo */}
             <Link to="/" className="flex items-center">

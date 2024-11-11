@@ -3,6 +3,7 @@ import { Heart } from "lucide-react";
 import chefCook from "../assets/chefPreparingFood.png"
 import fryingPan from "../assets/cookingpan.png"
 import cookedFood from "../assets/cookedBbq.png"
+import {motion} from "framer-motion"
 
 const HomyMessage = () => {
   return (
@@ -35,12 +36,16 @@ const HomyMessage = () => {
           </div>
         </div>
 
-        <div className="space-y-8 max-w-[24rem]">
+        <motion.div className="space-y-8 max-w-[24rem] overflow-hidden"
+        initial={{x:100,opacity:0,scale:0}}
+        whileInView={{x:0,opacity:1,scale:1}}
+        transition={{duration:0.6, ease:"easeOut"}}
+        >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             We provide healthy food for your family{" "}
             <Heart className="inline-block h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 text-red-500 fill-current" />
           </h2>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

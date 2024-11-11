@@ -1,4 +1,5 @@
 import ServiceCard from '@/components/ServiceCard'
+import {motion} from "framer-motion"
 import { Calendar, ChefHat, IceCreamBowl, Smile } from 'lucide-react'
 interface Service {
     title: string
@@ -37,7 +38,12 @@ const Services = () => {
     </h2>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {services.map((service, index) => (
-        <ServiceCard key={index} service={service} />
+        <motion.div
+        initial={{y:index%2?-100:100,opacity:0}}
+        whileInView={{y:0,opacity:1}}
+        transition={{duration:0.6,ease:"easeOut"}}>
+          <ServiceCard key={index} service={service} />
+        </motion.div>
       ))}
     </div>
   </div>

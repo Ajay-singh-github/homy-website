@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ClipboardList, Flag, HelpCircle, Star } from "lucide-react"
-
+import {motion} from "framer-motion"
 const About = () => {
   return (
     <section className="container mx-auto px-4 py-12 md:py-24">
@@ -8,8 +8,12 @@ const About = () => {
         About Homy
       </h1>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-6 overflow-hidden">
         {/* Who We Are? Card */}
+        <motion.div
+        initial={{x:-100,opacity:0}}
+        whileInView={{x:0,opacity:1}}
+        transition={{duration:0.6, ease:"easeOut"}}>
         <Card className="border-gray-100">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-xl font-semibold">
@@ -26,8 +30,13 @@ const About = () => {
             </p>
           </CardContent>
         </Card>
+        </motion.div>
 
         {/* Our Mission Card */}
+        <motion.div
+        initial={{y:-100,opacity:0}}
+        whileInView={{y:0,opacity:1}}
+        transition={{duration:0.6, ease:"easeOut"}}>
         <Card className="border-gray-100">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-xl font-semibold">
@@ -44,8 +53,13 @@ const About = () => {
             </p>
           </CardContent>
         </Card>
+        </motion.div>
 
         {/* Our Values Card */}
+        <motion.div
+        initial={{y:100,opacity:0}}
+        whileInView={{y:0,opacity:1}}
+        transition={{duration:0.6, ease:"easeOut"}}>
         <Card className="border-gray-100">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-xl font-semibold">
@@ -72,8 +86,13 @@ const About = () => {
             </ul>
           </CardContent>
         </Card>
+        </motion.div>
 
         {/* What We Offer? Card */}
+        <motion.div
+        initial={{x:100,opacity:0}}
+        whileInView={{x:0,opacity:1}}
+        transition={{duration:0.6, ease:"easeOut"}}>
         <Card className="border-gray-100">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-xl font-semibold">
@@ -101,6 +120,7 @@ const About = () => {
             </ul>
           </CardContent>
         </Card>
+        </motion.div>
       </div>
     </section>
   )

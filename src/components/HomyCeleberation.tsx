@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import line from "../assets/line.svg";
 import celebration from "../assets/celebrations.jpeg";
+import {motion} from "framer-motion"
 
 const HomyCelebration = () => {
   return (
@@ -13,7 +14,10 @@ const HomyCelebration = () => {
 
       <img src={line} alt="" className="absolute hidden sm:block -left-[14rem] top-[12rem] -scale-x-100" />
 
-      <div className="container mx-auto px-4 py-4 sm:py-16 relative">
+      <motion.div className="container mx-auto px-4 py-4 sm:py-16 relative"
+      initial={{x:100,opacity:0,scale:0}}
+      whileInView={{x:0,opacity:1,scale:1}}
+      transition={{duration:0.6, ease:"easeOut"}}>
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-14 sm:mb-6">
             Elevate Your Celebrations
@@ -28,7 +32,7 @@ const HomyCelebration = () => {
             <Link to="/plans">View Plans</Link>
           </Button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
