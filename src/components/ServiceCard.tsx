@@ -6,7 +6,7 @@ interface Service {
   }
 const ServiceCard = ({ service }: { service: Service }) => {
   return (
-    <Card className="border rounded-2xl">
+    <Card className="border rounded-2xl hover:scale-110 shadow-lg w-full h-full">
       <CardContent className="pt-6 text-center px-6">
         <div className="mx-auto w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-4">
           <div className="text-red-500">

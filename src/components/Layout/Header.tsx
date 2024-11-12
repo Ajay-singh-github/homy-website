@@ -73,10 +73,7 @@ const HeaderContent = () => {
             </Button>
 
             {/* Mobile Menu Button */}
-            <SidebarTrigger className="md:hidden">
-              <Button variant="ghost" size="icon">
-              </Button>
-            </SidebarTrigger>
+            <SidebarTrigger children={<img src={menu} alt=""  />} className="md:hidden"/>
           </div>
         </div>
       </header>
