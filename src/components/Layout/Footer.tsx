@@ -16,7 +16,7 @@ const Footer = () => {
               <img
                 src={homyLogo}
                 alt="Homy Logo"
-                className="h-20 w-auto"
+                className="h-[7.3rem] w-auto"
               />
             </Link>
           </div>

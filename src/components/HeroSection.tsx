@@ -8,21 +8,21 @@ const HeroSection = () => {
   const navigate = useNavigate();
   return (
     <div
-      className="h-[80vh] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-end gap-8"
+      className="h-[80vh] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-end gap-4"
       style={{
         backgroundImage:`url(${heroImg})`,
       }}
     >
       <div className="w-[16rem] sm:w-[24rem]  text-center">
-        <h1 className="text-3xl secondaryFont">
+        <h1 className="text-[2.5rem] secondaryFont">
           Welcome to <span className="text-red-500">Homy</span>
         </h1>
-        <p>Delicious meals, personalized plans, and a chef at your doorstep!</p>
+        <p className="text-lg">Delicious meals, personalized plans, and a chef at your doorstep!</p>
       </div>
-      <div className="flex gap-8 justify-between">
+      <div className="flex flex-col sm:flex-row gap-8 justify-between">
         <Button
           variant="default"
-          className="bg-zinc-900 text-white hover:bg-zinc-800 rounded-full px-6"
+          className="w-[12rem] bg-zinc-900 text-white hover:bg-zinc-800 rounded-full px-6"
           onClick={() => {
             navigate("/plans");
           }}
@@ -31,7 +31,7 @@ const HeroSection = () => {
         </Button>
         <Button
           variant="default"
-          className="bg-white text-black border border-black hover:bg-zinc-100 rounded-full px-6"
+          className="w-[12rem] bg-white text-black border border-black hover:bg-zinc-100 rounded-full px-6"
           onClick={() => {
             navigate("/contact");
           }}

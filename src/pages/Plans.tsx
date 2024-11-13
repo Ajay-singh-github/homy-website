@@ -1,19 +1,9 @@
 import Plan from "@/components/Plan";
 
 const plans = [
+  
   {
-    price: 7000,
-    title: "Homy Comfort",
-    description:
-      "Enjoy chef-prepared North Indian meals at home with 3 dishes per visit. Perfect for families of 4.",
-    features: [
-      { text: "North Indian Food" },
-      { text: "3 dishes + 1 type of bread" },
-      { text: "Serves up to 4" },
-    ],
-  },
-  {
-    price: 10000,
+    price: 12000,
     title: "Homy Fusion",
     description:
       "A mix of global cuisines including Indian, Chinese, and Italian, with a party package for special occasions.",
@@ -25,7 +15,7 @@ const plans = [
     ],
   },
   {
-    price: 18000,
+    price: 21000,
     title: "Homy Wellness",
     description:
       "Get meals tailored to your dietary needs, along with a dietitian consultation and party services.",
@@ -39,11 +29,12 @@ const plans = [
       },
     ],
   },
+
 ];
 
 const Plans = () => {
   return (
-    <div className="p-16 lg:p-20 grid grid-rows-1 gap-8">
+    <div className="p-8 sm:p-16 lg:p-20 grid grid-rows-1 gap-8">
       <h2 className="secondaryFont font-bold text-[2rem] text-red-500">Plans</h2>
       <div className="flex flex-wrap gap-8">
         {plans.map((plan, index) => (

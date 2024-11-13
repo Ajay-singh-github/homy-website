@@ -57,7 +57,7 @@ const data = {
   
 const Gallery = () => {
   return (
-    <div className="p-16 lg:p-20 grid grid-rows-1 gap-8">
+    <div className="p-8 sm:p-16 lg:p-20 grid grid-rows-1 gap-8">
         <CooksGallery/>
         <GalleryLayout title={data.title} images={data.images}/>
     </div>

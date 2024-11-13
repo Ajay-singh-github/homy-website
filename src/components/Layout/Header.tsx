@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import menu from "@/assets/menu.svg"
+import menu from "@/assets/menu.svg";
 import { Button } from "@/components/ui/button";
 import {
   Sidebar,
@@ -25,7 +25,11 @@ const navItems = [
 
 const HeaderContent = () => {
   const navigate = useNavigate();
-  const { setOpen } = useSidebar();
+  const { setOpen,toggleSidebar } = useSidebar();
+  // const [isOpen,setIsOpen] = useState();
+  // useEffect(()=>{
+  //   setOpen(isOpen);
+  // },[isOpen])
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,10 +38,10 @@ const HeaderContent = () => {
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     handleResize(); // Call once on mount to set initial state
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [setOpen]);
 
   return (
@@ -47,7 +51,7 @@ const HeaderContent = () => {
           <div className="flex items-center justify-between h-full">
             {/* Logo */}
             <Link to="/" className="flex items-center">
-              <img src={homyLogo} alt="Homy Logo" className="h-16 w-auto" />
+              <img src={homyLogo} alt="Homy Logo" className="h-20 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -73,47 +77,52 @@ const HeaderContent = () => {
             </Button>
 
             {/* Mobile Menu Button */}
-            <SidebarTrigger children={<img src={menu} alt=""  />} className="md:hidden"/>
+            <SidebarTrigger
+              children={<img src={menu} alt="" />}
+              className="md:hidden"
+            />
           </div>
         </div>
       </header>
 
       {/* Mobile Sidebar */}
       <div className="hidden">
-      <Sidebar className="md:hidden">
-        <SidebarHeader className="px-4 py-2">
-          <img src={homyLogo} alt="Homy Logo" className="h-16 w-auto" />
-        </SidebarHeader>
-        <SidebarContent>
-          <SidebarMenu>
-            {navItems.map((item) => (
-              <SidebarMenuItem key={item.name}>
-                <SidebarMenuButton>
-                  <Link
-                    to={item.path}
-                    className="flex items-center w-full px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 transition-colors"
-                    onClick={() => setOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            ))}
-          </SidebarMenu>
-        </SidebarContent>
-        <SidebarFooter className="p-4">
-          <Button
-            variant="default"
-            className="w-full bg-zinc-900 text-white hover:bg-zinc-800 rounded-full"
-            onClick={() => {
-              navigate("/contact");
-              setOpen(false);
-            }}
-          >
-            Contact us
-          </Button>
-        </SidebarFooter>
-      </Sidebar>
+        <Sidebar className="md:hidden">
+          <SidebarHeader className="px-4 py-2">
+            <img src={homyLogo} alt="Homy Logo" className="h-16 w-auto" />
+          </SidebarHeader>
+          <SidebarContent>
+            <SidebarMenu>
+              {navItems.map((item) => (
+                <SidebarMenuItem key={item.name}>
+                  <SidebarMenuButton>
+                    <div
+                      className="flex items-center w-full px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 transition-colors"
+                      onClick={() => {
+                        toggleSidebar()
+                        navigate(item.path)
+                      }}
+                    >
+                      {item.name}
+                    </div>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarContent>
+          <SidebarFooter className="p-4">
+            <Button
+              variant="default"
+              className="w-full bg-zinc-900 text-white hover:bg-zinc-800 rounded-full"
+              onClick={() => {
+                navigate("/contact");
+                setOpen(false);
+              }}
+            >
+              Contact us
+            </Button>
+          </SidebarFooter>
+        </Sidebar>
       </div>
     </>
   );

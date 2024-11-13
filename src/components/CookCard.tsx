@@ -9,7 +9,7 @@ interface Chef {
   }
 const CookCard = ({ chef }: { chef: Chef }) => {
   return (
-    <Card className="relative overflow-hidden rounded-lg bg-black text-white">
+    <Card className="relative h-fit overflow-hidden rounded-lg bg-black text-white">
       <div className="relative aspect-[3/4] w-full">
         <img
           src={chef.image}

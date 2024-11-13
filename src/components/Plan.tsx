@@ -21,7 +21,7 @@ const Plan = ({
     ],
   }: PricingCardProps) => {
   return (
-    <Card className="w-full max-w-sm rounded-3xl border border-gray-200 bg-white shadow-sm">
+    <Card className="w-full max-w-sm rounded-3xl border border-gray-200 bg-white hover:scale-110 shadow-lg">
       <CardHeader className="space-y-2 pb-2">
         <div className="flex items-baseline">
           <span className="text-4xl font-bold tracking-tight">{price}</span>
