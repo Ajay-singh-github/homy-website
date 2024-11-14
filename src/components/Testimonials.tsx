@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import { Star } from "lucide-react"
 import customer from "../assets/customer.png"
+import { useState } from "react"
 
 interface Testimonial {
     name: string
@@ -12,26 +13,33 @@ interface Testimonial {
   
   const testimonials: Testimonial[] = [
     {
-      name: "Wade Warren",
-      rating: 4.75,
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: customer
+      name: "Vikram Singh",
+      rating: 5,
+      comment: "Chiefs make great food and the homy team is helpful whenever I have to make adjustment to chiefs timing according to my schedule",
+      image: "https://lh3.googleusercontent.com/a-/ALV-UjW8aIzk-MBtiVH7HI3s-NsmMBDIn32EOXy3q9QpezrnXLK7TCE=w120-h120-p-rp-mo-br100"
     },
     {
-      name: "Wade Warren",
-      rating: 4.75,
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: customer
+      name: "Dev Aryan Cilson",
+      rating: 5,
+      comment: "I tried 'The Homey' last date and it offers a fantastic cooking service that feels both personal and professional. Their chefs whip up delicious, customized meals with fresh ingredients and cater to any dietary needs. It's a real treat to have such great food delivered straight to your door, making every meal effortless and enjoyable. Highly Appreciated and Recommend too.",
+      image: "https://lh3.googleusercontent.com/a-/ALV-UjXwW3zIk3DmaGOKfGmDaA-dF0ZpWy3oCvnkGPTCe_T9NjwsXDxt=w120-h120-p-rp-mo-br100"
     },
     {
-      name: "Wade Warren",
-      rating: 4.75,
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: customer
+      name: "Neeru Manchanda",
+      rating: 4,
+      comment: "Well manners Chef nd Homely food I enjoyed",
+      image: "https://lh3.googleusercontent.com/a-/ALV-UjUr3wcDCvlNZn7zn-YD0dbDMumEtB4UyXqwFhPcHMjk6xCCFpk=w72-h72-p-rp-mo-br100"
     }
   ]
   
   function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const maxLength = 40; 
+
+    const handleToggle = () => {
+        setIsExpanded(!isExpanded);
+    };
+
     return (
       <Card className="bg-zinc-900 border-none">
         <CardContent className="p-6">
@@ -51,7 +59,15 @@ interface Testimonial {
                 <Star className="h-4 w-4 fill-yellow-500 text-yellow-500" />
               </div>
               <p className="text-gray-300 text-sm leading-relaxed">
-                {testimonial.comment}
+                    {isExpanded ? testimonial.comment : `${testimonial.comment.slice(0, maxLength)}...`}
+                {testimonial.comment.length > maxLength && (
+                    <button
+                        onClick={handleToggle}
+                        className="text-blue-500 hover:underline"
+                    >
+                        {isExpanded ? "Show Less" : "Read More"}
+                    </button>
+                )}
               </p>
             </div>
           </div>

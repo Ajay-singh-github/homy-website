@@ -1,8 +1,8 @@
-import { GitHubLogoIcon, InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons"
+import { InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons"
 import { Facebook } from "lucide-react"
 import { Link } from "react-router-dom"
-import playstore from "../../assets/playstore.png"
-import appStore from "../../assets/appStore.png"
+import playstore from "../../assets/playstore.svg"
+import appStore from "../../assets/appstore.svg"
 import homyLogo from "../../assets/Homy.svg"
 
 const Footer = () => {
@@ -63,6 +63,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/refund" className="text-gray-300 hover:text-white transition-colors">
+                  Refund Policy
+                </Link>
+              </li>
+              <li>
                 <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
                   Contact Us
                 </Link>
@@ -75,32 +80,32 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Get in touch</h3>
             <div className="flex space-x-4 mb-6">
               <Link
-                to="#"
+                to="https://x.com/i/flow/login?redirect_after_login=%2Fthehomy_in"
                 className="bg-red-500 p-2 rounded-full hover:bg-red-600 transition-colors"
                 aria-label="Twitter"
               >
                 <TwitterLogoIcon className="h-5 w-5" />
               </Link>
               <Link
-                to="#"
+                to="https://www.facebook.com/people/Thehomy/61553486985244/"
                 className="bg-red-500 p-2 rounded-full hover:bg-red-600 transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
               </Link>
               <Link
-                to="#"
+                to="https://www.instagram.com/thehomy.in/"
                 className="bg-red-500 p-2 rounded-full hover:bg-red-600 transition-colors"
                 aria-label="Instagram"
               >
                 <InstagramLogoIcon className="h-5 w-5" />
               </Link>
               <Link
-                to="#"
+                to="https://in.linkedin.com/company/thehomy-in"
                 className="bg-red-500 p-2 rounded-full hover:bg-red-600 transition-colors"
                 aria-label="GitHub"
               >
-                <GitHubLogoIcon className="h-5 w-5" />
+                <LinkedInLogoIcon className="h-5 w-5" />
               </Link>
             </div>
             <div className="space-y-4">

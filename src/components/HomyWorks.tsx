@@ -1,5 +1,5 @@
-import playstore from "../assets/playstore.png";
-import appStore from "../assets/appStore.png";
+import playstore from "../assets/playstore.svg";
+import appStore from "../assets/appstore.svg";
 import line from "../assets/line.svg";
 import { Link } from "react-router-dom";
 import homyWorks from "../assets/homyWorkImg.jpeg";

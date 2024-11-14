@@ -24,11 +24,8 @@ const Nutrition = () => {
       <div className="relative">
         <div className="grid grid-cols-1  md:grid-cols-[1fr_auto_1fr] gap-16 items-center">
           {/* Regular Sandwich */}
-          <motion.div
+          <div
             className="text-center"
-            initial={{ scale: 0, x: -100, opacity: 0 }}
-            whileInView={{ scale: 1, x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <div className="relative w-full max-w-md mx-auto mb-4">
               <img
@@ -38,7 +35,7 @@ const Nutrition = () => {
               />
             </div>
             <h3 className="text-xl font-semibold">Regular Sandwich</h3>
-          </motion.div>
+          </div>
 
           <motion.div
             className="space-y-6 mx-auto "
@@ -70,11 +67,8 @@ const Nutrition = () => {
             ))}
           </motion.div>
           {/* Homy Sandwich */}
-          <motion.div
+          <div
             className="text-center"
-            initial={{ scale: 0, x: 100, opacity: 0 }}
-            whileInView={{ scale: 1, x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <div className="relative w-full max-w-md mx-auto mb-4">
               <img
@@ -84,7 +78,7 @@ const Nutrition = () => {
               />
             </div>
             <h3 className="text-xl font-semibold">Homy Sandwich</h3>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

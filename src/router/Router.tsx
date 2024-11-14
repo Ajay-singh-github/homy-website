@@ -7,6 +7,9 @@ import ContactUs from "@/pages/ContactUs";
 import Gallery from "@/pages/Gallery";
 import Home from "@/pages/Home";
 import Plans from "@/pages/Plans";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import RefundPolicy from "@/pages/RefundPolicy";
+import TermsAndConditions from "@/pages/TermsCondition";
 import { ReactNode } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 interface LayoutProps {
@@ -76,6 +79,30 @@ const Router = () => {
           element={
             <Layout>
               <Gallery />
+            </Layout>
+          }
+        />
+        <Route
+          path="/privacy"
+          element={
+            <Layout>
+              <PrivacyPolicy />
+            </Layout>
+          }
+        />
+        <Route
+          path="/terms"
+          element={
+            <Layout>
+              <TermsAndConditions />
+            </Layout>
+          }
+        />
+        <Route
+          path="/refund"
+          element={
+            <Layout>
+              <RefundPolicy />
             </Layout>
           }
         />

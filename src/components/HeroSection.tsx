@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import heroImg from "../assets/heroImg.svg"
-import playstore from "../assets/playstore.png";
-import appStore from "../assets/appStore.png";
+import playstore from "../assets/playstore.svg";
+import appStore from "../assets/appstore.svg";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -18,6 +18,8 @@ const HeroSection = () => {
           Welcome to <span className="text-red-500">Homy</span>
         </h1>
         <p className="text-lg">Delicious meals, personalized plans, and a chef at your doorstep!</p>
+        <p className="text-lg text-red-500 secondaryFont">Now Serving in Delhi NCR</p>
+
       </div>
       <div className="flex flex-col sm:flex-row gap-8 justify-between">
         <Button

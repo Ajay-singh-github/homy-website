@@ -20,7 +20,7 @@ const plans = [
     description:
       "Get meals tailored to your dietary needs, along with a dietitian consultation and party services.",
     features: [
-      { text: "North Indian Food" },
+      { text: "Multi cuisine" },
       { text: "6 dishes + 2 types of bread" },
       { text: "Serves up to 4" },
       { text: "Party Package: 3 parties (Serves up to 12 people)" },
