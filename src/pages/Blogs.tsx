@@ -1,61 +1,57 @@
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import BlogCard from '@/components/BlogCard';
-import blog from "../assets/blogs.jpeg"
 
-// Sample blog data
-const blogData = [
-  {
-    title: "Meal Prep Tips for a Healthier Life",
-    author: "Saanvi Biradar",
-    role: "Head Chef",
-    image: blog,
-    description: "Prepping meals ahead can be a game-changer for busy weeks. With the Homy Comfort plan, get fresh ingredients and easy-to-follow recipes that take the stress out of cooking. Discover how simple steps like organizing ingredients and planning your meals can keep you consistent and energized all week."
-  },
-  {
-    title: "Quick and Easy Breakfast Ideas",
-    author: "Alex Johnson",
-    role: "Nutritionist",
-    image: blog,
-    description: "Start your day right with these quick and nutritious breakfast ideas. Perfect for busy mornings, these recipes will fuel your body and mind for the day ahead."
-  },
-  {
-    title: "Vegetarian Dishes That Pack a Protein Punch",
-    author: "Emma Lee",
-    role: "Dietitian",
-    image: blog,
-    description: "Discover delicious vegetarian meals that are high in protein. These recipes prove that you don't need meat to meet your protein needs and stay satisfied."
-  },
-  {
-    title: "Meal Prep Tips for a Healthier Life",
-    author: "Saanvi Biradar",
-    role: "Head Chef",
-    image:blog,
-    description: "Prepping meals ahead can be a game-changer for busy weeks. With the Homy Comfort plan, get fresh ingredients and easy-to-follow recipes that take the stress out of cooking. Discover how simple steps like organizing ingredients and planning your meals can keep you consistent and energized all week."
-  },
-  {
-    title: "Quick and Easy Breakfast Ideas",
-    author: "Alex Johnson",
-    role: "Nutritionist",
-    image: blog,
-    description: "Start your day right with these quick and nutritious breakfast ideas. Perfect for busy mornings, these recipes will fuel your body and mind for the day ahead."
-  },
-  {
-    title: "Vegetarian Dishes That Pack a Protein Punch",
-    author: "Emma Lee",
-    role: "Dietitian",
-    image: blog,
-    description: "Discover delicious vegetarian meals that are high in protein. These recipes prove that you don't need meat to meet your protein needs and stay satisfied."
-  },
-  
-  // Add more blog data as needed
-];
+interface Blog {
+  id: string; // Updated to match the response
+  title: string;
+  author: string;
+  role: string;
+  image: string;
+  description: string;
+}
 
 const Blogs = () => {
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
+
+  // Fetch blogs from the backend
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await axios.get('http://localhost:3000/api/v1/blogs'); // Replace with your API URL
+        setBlogs(response.data);
+      } catch (err) {
+        setError('Failed to fetch blogs. Please try again later.');
+        console.error('Error fetching blogs:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBlogs();
+  }, []);
+
+  if (loading) {
+    return <div className="text-center py-12">Loading blogs...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center text-red-500 py-12">{error}</div>;
+  }
+
   return (
     <div className="container mx-auto px-4 py-12 md:py-24">
       <h2 className="text-center text-4xl font-bold text-red-500 mb-12 secondaryFont">Daily Bites</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {blogData.map((blog, index) => (
-          <div key={index} className="flex flex-col self-start">
+        {blogs.map((blog) => (
+          <div
+            key={blog.id} // Ensure `id` matches your API response
+            className="flex flex-col self-start cursor-pointer"
+            onClick={() => navigate(`/blogs/${blog.id}`)} // Navigate to blog details
+          >
             <BlogCard
               title={blog.title}
               author={blog.author}

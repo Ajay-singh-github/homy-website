@@ -1,8 +1,8 @@
 import Milestone from "@/components/Milestone";
 import { Heart } from "lucide-react";
-import chefCook from "../assets/chefPreparingFood.png"
-import fryingPan from "../assets/cookingpan.png"
-import cookedFood from "../assets/cookedBbq.png"
+import chefCook from "../assets/chef.jpg"
+import fryingPan from "../assets/fishCurry.jpg"
+import cookedFood from "../assets/FriedVeggie.jpg"
 import {motion} from "framer-motion"
 
 const HomyMessage = () => {

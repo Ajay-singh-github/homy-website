@@ -2,6 +2,7 @@ import Footer from "@/components/Layout/Footer";
 import Header from "@/components/Layout/Header";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import About from "@/pages/About";
+import BlogDetail from "@/pages/BlogDetail";
 import Blogs from "@/pages/Blogs";
 import ContactUs from "@/pages/ContactUs";
 import Gallery from "@/pages/Gallery";
@@ -106,6 +107,7 @@ const Router = () => {
             </Layout>
           }
         />
+        <Route path="/blogs/:id" element={<Layout><BlogDetail/></Layout>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
