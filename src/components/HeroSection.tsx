@@ -17,7 +17,7 @@ const HeroSection = () => {
         <h1 className="text-[2.5rem] secondaryFont">
           Welcome to <span className="text-red-500">Homy</span>
         </h1>
-        <p className="text-lg">Delicious meals, personalized plans, and a chef at your doorstep!</p>
+        <p className="text-lg">Experience luxury Home Chef Services</p>
         <p className="text-lg text-red-500 secondaryFont">Now Serving in Delhi NCR</p>
 
       </div>

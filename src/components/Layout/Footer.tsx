@@ -3,7 +3,7 @@ import { Facebook } from "lucide-react"
 import { Link } from "react-router-dom"
 import playstore from "../../assets/playStore.png"
 import appStore from "../../assets/appStore.png"
-import homyLogo from "../../assets/Homy.svg"
+import homyLogo from "../../assets/HomyLogo.svg"
 
 const Footer = () => {
   return (

@@ -7,6 +7,7 @@ import Blogs from "@/pages/Blogs";
 import ContactUs from "@/pages/ContactUs";
 import Gallery from "@/pages/Gallery";
 import Home from "@/pages/Home";
+import Menu from "@/pages/Menu";
 import Plans from "@/pages/Plans";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import RefundPolicy from "@/pages/RefundPolicy";
@@ -104,6 +105,14 @@ const Router = () => {
           element={
             <Layout>
               <RefundPolicy />
+            </Layout>
+          }
+        />
+        <Route
+          path="/menu"
+          element={
+            <Layout>
+              <Menu/>
             </Layout>
           }
         />
