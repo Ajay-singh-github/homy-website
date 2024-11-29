@@ -7,40 +7,47 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-interface Chef {
-  name: string;
-  rating: number;
-  cuisines: string[];
-  image: string;
-}
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-const chefs: Chef[] = [
-  {
-    name: "Andrew",
-    rating: 4.3,
-    cuisines: ["Italian", "Indian", "Mexican", "Chinese"],
-    image: cook,
-  },
-  {
-    name: "Sarah",
-    rating: 4.5,
-    cuisines: ["French", "Japanese", "Thai"],
-    image: cook,
-  },
-  {
-    name: "Michael",
-    rating: 4.7,
-    cuisines: ["Mediterranean", "Greek", "Turkish"],
-    image: cook,
-  },
-  {
-    name: "Emma",
-    rating: 4.4,
-    cuisines: ["Korean", "Vietnamese", "Chinese"],
-    image: cook,
-  },
-];
+
 const CooksGallery = () => {
+  const [chefs,setChefs] = useState( [
+    {
+      name: "Andrew",
+      cuisines: ["Italian", "Indian", "Mexican", "Chinese"],
+      image: cook,
+    },
+    {
+      name: "Sarah",
+      
+      cuisines: ["French", "Japanese", "Thai"],
+      image: cook,
+    },
+    {
+      name: "Michael",
+      
+      cuisines: ["Mediterranean", "Greek", "Turkish"],
+      image: cook,
+    },
+    {
+      name: "Emma",
+     
+      cuisines: ["Korean", "Vietnamese", "Chinese"],
+      image: cook,
+    },
+  ]);
+  const fetchChefs = async()=>{
+    try{
+      const {data} = await axios.get("http://localhost:3000/api/v1/chef/images")
+      setChefs(data);
+    }catch(error){
+      console.log(error)
+    }
+  }
+  useEffect(()=>{
+    fetchChefs()
+  },[])
   return (
     <div>
       <h1 className="text-center secondaryFont text-4xl font-bold italic text-red-500 mb-8">
