@@ -12,7 +12,7 @@ import {
   SidebarMenuButton,
   useSidebar,
 } from "@/components/ui/sidebar";
-import homyLogo from "../../assets/Homy.svg";
+import homyLogo from "../../assets/logo.png";
 import { useEffect } from "react";
 
 const navItems = [

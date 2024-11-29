@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import heroImg from "../assets/heroImg.svg"
-import playstore from "../assets/playstore.svg";
-import appStore from "../assets/appstore.svg";
+import playstore from "../assets/playStore.png";
+import appStore from "../assets/appStore.png";
 
 const HeroSection = () => {
   const navigate = useNavigate();

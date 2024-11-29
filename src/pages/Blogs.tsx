@@ -22,7 +22,7 @@ const Blogs = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/blogs'); // Replace with your API URL
+        const response = await axios.get('https://13.202.22.147/api/v1/blogs'); // Replace with your API URL
         setBlogs(response.data);
       } catch (err) {
         setError('Failed to fetch blogs. Please try again later.');

@@ -1,8 +1,8 @@
 import { InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons"
 import { Facebook } from "lucide-react"
 import { Link } from "react-router-dom"
-import playstore from "../../assets/playstore.svg"
-import appStore from "../../assets/appstore.svg"
+import playstore from "../../assets/playStore.png"
+import appStore from "../../assets/appStore.png"
 import homyLogo from "../../assets/Homy.svg"
 
 const Footer = () => {
