@@ -1,47 +1,87 @@
 import Plan from "@/components/Plan";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-const plans = [
-  
+// Define the type for a Plan
+interface PlanType {
+  morningPrice: number;
+  eveningPrice: number;
+  type: string;
+  description: string;
+  features: string[];
+}
+
+const testPlans: PlanType[] = [
   {
-    price: 12000,
-    title: "Homy Fusion",
+    morningPrice: 12000,
+    eveningPrice: 15000,
+    type: "Homy Fusion",
     description:
       "A mix of global cuisines including Indian, Chinese, and Italian, with a party package for special occasions.",
     features: [
-      { text: "North Indian + Multicuisine Food" },
-      { text: "3 dishes + 1 type of bread" },
-      { text: "Serves up to 4" },
-      { text: "Party Package: 2 parties (Serves up to 10 people)" },
+      "Multi cuisine",
+      "6 dishes + 2 types of bread", 
+      "Serves up to 4",
+      "Party Package: 3 parties (Serves up to 12 people)",
+      "Dietitian Consultation: Personalized meal plan based on your dietary needs"
     ],
   },
   {
-    price: 21000,
-    title: "Homy Wellness",
+    morningPrice: 21000,
+    eveningPrice: 25000,
+    type: "Homy Wellness",
     description:
       "Get meals tailored to your dietary needs, along with a dietitian consultation and party services.",
     features: [
-      { text: "Multi cuisine" },
-      { text: "6 dishes + 2 types of bread" },
-      { text: "Serves up to 4" },
-      { text: "Party Package: 3 parties (Serves up to 12 people)" },
-      {
-        text: "Dietitian Consultation: Personalized meal plan based on your dietary needs",
-      },
+      "Multi cuisine",
+      "6 dishes + 2 types of bread", 
+      "Serves up to 4",
+      "Party Package: 3 parties (Serves up to 12 people)",
+      "Dietitian Consultation: Personalized meal plan based on your dietary needs"
     ],
   },
-
 ];
 
+// Define the type for the API response
+interface PlansResponse {
+  success: boolean;
+  data: PlanType[];
+}
+
 const Plans = () => {
+  const [plans, setPlans] = useState<PlanType[]>([]);
+
+  const fetchPlans = async () => {
+    try {
+      const { data } = await axios.get<PlansResponse>(
+        "https://13.202.22.147/api/v1/plans/get"
+      );
+      console.log(data);
+      if (data.success) {
+        setPlans(data.data);
+      }
+    } catch (error) {
+      console.log(error);
+      setPlans(testPlans);
+    }
+  };
+
+  useEffect(() => {
+    fetchPlans();
+  }, []);
+
   return (
     <div className="p-8 sm:p-16 lg:p-20 grid grid-rows-1 gap-8">
-      <h2 className="secondaryFont font-bold text-[2rem] text-red-500">Plans</h2>
+      <h2 className="secondaryFont font-bold text-[2rem] text-red-500">
+        Plans
+      </h2>
       <div className="flex flex-wrap gap-8">
         {plans.map((plan, index) => (
           <Plan
-            key={index} // Add a unique key for each element in the list
-            price={plan.price}
-            title={plan.title}
+            key={index}
+            morningPrice={plan.morningPrice}
+            eveningPrice={plan.eveningPrice}
+            title={plan.type}
             description={plan.description}
             features={plan.features}
           />
@@ -50,4 +90,5 @@ const Plans = () => {
     </div>
   );
 };
+
 export default Plans;

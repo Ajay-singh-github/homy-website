@@ -16,30 +16,30 @@ const CooksGallery = () => {
     {
       name: "Andrew",
       cuisines: ["Italian", "Indian", "Mexican", "Chinese"],
-      image: cook,
+      profilePicture: cook,
     },
     {
       name: "Sarah",
       
       cuisines: ["French", "Japanese", "Thai"],
-      image: cook,
+      profilePicture: cook,
     },
     {
       name: "Michael",
       
       cuisines: ["Mediterranean", "Greek", "Turkish"],
-      image: cook,
+      profilePicture: cook,
     },
     {
       name: "Emma",
      
       cuisines: ["Korean", "Vietnamese", "Chinese"],
-      image: cook,
+      profilePicture: cook,
     },
   ]);
   const fetchChefs = async()=>{
     try{
-      const {data} = await axios.get("http://localhost:3000/api/v1/chef/images")
+      const {data} = await axios.get("https://13.202.22.147/api/v1/chef/images")
       setChefs(data);
     }catch(error){
       console.log(error)

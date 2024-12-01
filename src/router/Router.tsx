@@ -13,7 +13,19 @@ import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import RefundPolicy from "@/pages/RefundPolicy";
 import TermsAndConditions from "@/pages/TermsCondition";
 import { ReactNode } from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+const ScrollToTop = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return null;
+};
+
 interface LayoutProps {
   children: ReactNode;
 }
@@ -22,9 +34,7 @@ const Layout = ({ children }: LayoutProps) => {
     <SidebarProvider>
       <div className="w-screen min-h-screen flex flex-col justify-between">
         <Header />
-        {/* <div className=" w-full h-full"> */}
         {children}
-        {/* </div> */}
         <Footer />
       </div>
     </SidebarProvider>
@@ -34,12 +44,13 @@ const Layout = ({ children }: LayoutProps) => {
 const Router = () => {
   return (
     <BrowserRouter>
-    <Routes>
-    <Route
+      <ScrollToTop /> {/* Ensure this is placed here */}
+      <Routes>
+        <Route
           path="/"
           element={
             <Layout>
-              <Home/>
+              <Home />
             </Layout>
           }
         />
@@ -59,7 +70,6 @@ const Router = () => {
             </Layout>
           }
         />
-
         <Route
           path="/plans"
           element={
@@ -76,7 +86,7 @@ const Router = () => {
             </Layout>
           }
         />
-         <Route
+        <Route
           path="/gallery"
           element={
             <Layout>
@@ -112,11 +122,18 @@ const Router = () => {
           path="/menu"
           element={
             <Layout>
-              <Menu/>
+              <Menu />
             </Layout>
           }
         />
-        <Route path="/blogs/:id" element={<Layout><BlogDetail/></Layout>} />
+        <Route
+          path="/blogs/:id"
+          element={
+            <Layout>
+              <BlogDetail />
+            </Layout>
+          }
+        />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
