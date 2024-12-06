@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Check } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -19,8 +20,12 @@ const Plan = ({
     features = [
     ],
 }: PricingCardProps) => {
+  const navigate = useNavigate()
+  const handleClick = ()=>{
+    navigate("/contact")
+  }
   return (
-    <Card className="w-full max-w-sm rounded-3xl border border-gray-200 bg-white hover:scale-110 transition-all duration-200 shadow-lg">
+    <Card className="w-full max-w-sm rounded-3xl border border-gray-200 bg-white hover:scale-110 transition-all duration-200 shadow-lg" onClick={handleClick}>
       <CardHeader className="space-y-2 pb-2">
         <div className="flex flex-col">
           <div className="flex items-baseline">

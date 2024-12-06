@@ -14,7 +14,7 @@ const BlogCard = ({
     author = "Saanvi Biradar",
     role = "Head Chef",
     image = "/placeholder.svg?height=200&width=400",
-    description = "Prepping meals ahead can be a game-changer for busy weeks. With the Homy Comfort plan, get fresh ingredients and easy-to-follow recipes that take the stress out of cooking. Discover how simple steps like organizing ingredients and planning your meals can keep you consistent and energized all week."
+    description = "Prepping meals ahead can be a game-changer for busy weeks. With Homy Comfort plan, get fresh ingredients and easy-to-follow recipes that take the stress out of cooking. Discover how simple steps like organizing ingredients and planning your meals can keep you consistent and energized all week."
 }: BlogCardProps) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const maxLength = 100; 

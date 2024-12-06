@@ -27,7 +27,7 @@ const Contact = () => {
   const onSubmit = async (body: FormData) => {
     setIsSubmitting(true)
     try {
-      const {data} = await axios.post('https://13.202.22.147/api/v1/query/create',body)
+      const {data} = await axios.post('https://thehomy.in/api/v1/query/create',body)
       console.log(data)
       if (!data) {
         throw new Error('Failed to submit the form')

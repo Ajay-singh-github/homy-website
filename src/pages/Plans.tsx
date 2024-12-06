@@ -54,7 +54,7 @@ const Plans = () => {
   const fetchPlans = async () => {
     try {
       const { data } = await axios.get<PlansResponse>(
-        "https://13.202.22.147/api/v1/plans/get"
+        "https://thehomy.in/api/v1/plans/get"
       );
       console.log(data);
       if (data.success) {

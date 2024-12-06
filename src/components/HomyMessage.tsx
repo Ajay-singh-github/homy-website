@@ -7,9 +7,9 @@ import {motion} from "framer-motion"
 
 const HomyMessage = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-2 py-16">
       <Milestone />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <div className="flex gap-2">
           <div className="relative aspect-[3/4] rounded-3xl overflow-hidden">
             <img
@@ -36,13 +36,13 @@ const HomyMessage = () => {
           </div>
         </div>
 
-        <motion.div className="space-y-8 max-w-[24rem] overflow-hidden"
+        <motion.div className="space-y-8 max-w-[28rem] overflow-hidden w-full"
         initial={{x:100,opacity:0,scale:0}}
         whileInView={{x:0,opacity:1,scale:1}}
         transition={{duration:0.6, ease:"easeOut"}}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            We provide healthy food for your family{" "}
+          <h2 className="text-2xl text-center md:text-left md:text-3xl lg:text-4xl font-bold leading-relaxed">
+            Our team is committed to keeping you and your family healthy with wholesome, delicious meals.{" "}
             <Heart className="inline-block h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 text-red-500 fill-current" />
           </h2>
         </motion.div>

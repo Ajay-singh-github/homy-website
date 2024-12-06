@@ -3,7 +3,7 @@ import appStore from "../assets/appStore.png";
 import line from "../assets/line.svg";
 import { Link } from "react-router-dom";
 import homyWorks from "../assets/homyWorkImg.jpeg";
-import iphone from "../assets/iphone.png";
+import iphone from "../assets/iPhone.svg";
 import {motion} from "framer-motion"
 
 const HomyWorks = () => {

@@ -64,7 +64,7 @@ const Gallery = () => {
   });
   const fetchImages = async () => {
     try {
-      const { data: responseData } = await axios.get('https://13.202.22.147/api/v1/images');
+      const { data: responseData } = await axios.get('https://thehomy.in/api/v1/images');
 
       // Limit to 8 images and map to retain layout
       const updatedImages = responseData.data.images.slice(0, 8).map((image:any, index:number) => ({

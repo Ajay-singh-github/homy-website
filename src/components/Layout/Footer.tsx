@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo Section */}
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-left">
             <Link to="/" className="inline-block">
               <img
                 src={homyLogo}
@@ -133,12 +133,12 @@ const Footer = () => {
 
         {/* Tagline */}
         <div className="text-center mt-16 mb-8">
-          <h2 className="text-2xl font-semibold">Your Meal Your Chef Your Way!</h2>
+          <h2 className="text-2xl font-semibold">Your Meal, Your Chef, Your Way!</h2>
         </div>
 
         {/* Copyright */}
         <div className="text-center text-sm text-gray-400 border-t border-gray-800 pt-8">
-          <p>Copyright © 2024 The Homy. All Rights Reserved</p>
+          <p>Copyright © 2024 Homy. All Rights Reserved</p>
         </div>
       </div>
       </footer>

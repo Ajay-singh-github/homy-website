@@ -14,7 +14,7 @@ interface Testimonial {
     {
       name: "Vikram Singh",
       rating: 5,
-      comment: "Chiefs make great food and the homy team is helpful whenever I have to make adjustment to chiefs timing according to my schedule",
+      comment: "Chiefs make great food and homy team is helpful whenever I have to make adjustment to chiefs timing according to my schedule",
       image: "https://lh3.googleusercontent.com/a-/ALV-UjW8aIzk-MBtiVH7HI3s-NsmMBDIn32EOXy3q9QpezrnXLK7TCE=w120-h120-p-rp-mo-br100"
     },
     {

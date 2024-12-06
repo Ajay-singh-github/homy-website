@@ -46,7 +46,7 @@ const TermsAndConditions: React.FC = () => {
             Parts of this Website offer an opportunity for users to post and exchange opinions and information in certain areas of the
             Website. TheHomy does not filter, edit, publish or review Comments prior to their presence on the Website. Comments do
             not reflect the views and opinions of TheHomy, its agents and/or affiliates. Comments reflect the views and opinions of
-            the person who posts their views and opinions. To the extent permitted by applicable laws, The Homy shall not be liable
+            the person who posts their views and opinions. To the extent permitted by applicable laws, Homy shall not be liable
             for the Comments or any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of
             and/or appearance of the Comments on this Website.
           </p>

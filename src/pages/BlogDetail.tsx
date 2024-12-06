@@ -31,7 +31,7 @@ const BlogDetail = () => {
     const fetchBlog = async () => {
       try {
         const response = await axios.get(
-          `https://13.202.22.147/api/v1/blogs/${id}`
+          `https://thehomy.in/api/v1/blogs/${id}`
         ); // Replace with your API URL
         console.log(response.data)
         setBlog(response.data);
