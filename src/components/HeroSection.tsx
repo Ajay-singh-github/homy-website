@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
-import heroImg from "../assets/heroImg.svg"
+import heroImg from "../assets/heroImg.svg";
 import playstore from "../assets/playStore.png";
 import appStore from "../assets/appStore.png";
 
@@ -10,7 +10,7 @@ const HeroSection = () => {
     <div
       className="h-[80vh] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-end gap-4"
       style={{
-        backgroundImage:`url(${heroImg})`,
+        backgroundImage: `url(${heroImg})`,
       }}
     >
       <div className="w-[18rem] mt-4 sm:w-[24rem]  text-center">
@@ -18,8 +18,9 @@ const HeroSection = () => {
           Welcome to <span className="text-red-500">Homy</span>
         </h1>
         <p className="text-lg">Experience luxury Home Chef Services</p>
-        <p className="text-lg text-red-500 secondaryFont">Now Serving in Delhi NCR</p>
-
+        <p className="text-lg text-red-500 secondaryFont">
+          Now Serving in Delhi NCR
+        </p>
       </div>
       <div className="flex flex-col sm:flex-row gap-8 justify-between">
         <Button
@@ -35,7 +36,8 @@ const HeroSection = () => {
           variant="default"
           className="w-[12rem] bg-white text-black border border-black hover:bg-zinc-100 rounded-full px-6"
           onClick={() => {
-            navigate("/contact");
+            window.location.href =
+              "https://play.google.com/store/apps/details?id=etsd.tdfcx.agh&pcampaignid=web_share";
           }}
         >
           Download App
@@ -43,7 +45,7 @@ const HeroSection = () => {
       </div>
       <div className="h-2/5 flex items-end justify-end w-full p-6 sm:p-16">
         <div className="space-y-4">
-          <Link to="#" className="block">
+          <Link to="https://play.google.com/store/apps/details?id=etsd.tdfcx.agh&pcampaignid=web_share" className="block">
             <img
               src={playstore}
               alt="Get it on Google Play"
