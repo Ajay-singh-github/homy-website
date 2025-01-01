@@ -109,7 +109,7 @@ const Footer = () => {
               </Link>
             </div>
             <div className="space-y-4">
-              <Link to="#" className="block">
+              <Link to="https://play.google.com/store/apps/details?id=etsd.tdfcx.agh&pcampaignid=web_share" className="block">
                 <img
                   src={playstore}
                   alt="Get it on Google Play"
