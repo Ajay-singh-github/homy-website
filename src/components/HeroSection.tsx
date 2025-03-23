@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import heroImg from "../assets/heroImg.svg";
-import playstore from "../assets/playStore.png";
+import playstore from "../assets/playstore.png";
 import appStore from "../assets/appStore.png";
 
 const HeroSection = () => {

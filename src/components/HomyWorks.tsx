@@ -1,4 +1,4 @@
-import playstore from "../assets/playStore.png";
+import playstore from "../assets/playstore.png";
 import appStore from "../assets/appStore.png";
 import line from "../assets/line.svg";
 import { Link } from "react-router-dom";
